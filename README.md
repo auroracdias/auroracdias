@@ -1,16 +1,25 @@
 ## Hi there 👋
+```c
+#include <stdio.h>
 
-<!--
-**auroracdias/auroracdias** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+void printSkills(const char *category, const char *skills[], int size) {
+    printf("%s: ", category);
+    for (int i = 0; i < size; i++) {
+        printf("%s", skills[i]);
+        if (i < size - 1) printf(", ");
+    }
+    printf("\n");
+}
 
-Here are some ideas to get you started:
+int main() {
+    const char *clientSkills[] = {"C", "C++"};
+    const char *serverDatabaseSkills[] = {"MySQL"};
+    const char *studying[] = {"Logic Programming", "Algorithm Optimization"};
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+    printSkills("Programming Languages", clientSkills, 2);
+    printSkills("Server & Database", serverDatabaseSkills, 1);
+    printSkills("Studying", studying, 2);
+
+    return 0;
+}
+```
